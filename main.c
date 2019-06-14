@@ -95,15 +95,12 @@ int main()
 			printf("Send failed with error code : %d", WSAGetLastError());
 			return 1;
 		}
-		//puts("Data Send");
 
 		//Receive a reply from the server
-		
-		//sprintf(FolderName, "E:\\TestsNIS\\PN\\%s", PNumber);
 		sprintf(FolderName, "D:\\TestsNIS\\%s", PNumber);
 
 		_mkdir(FolderName);
-		//sprintf(FileName, "E:\\TestsNIS\\PN\\%s\\Origin.txt", PNumber);
+		
 		sprintf(FileName, "D:\\TestsNIS\\%s\\Origin.txt", PNumber);
 
 		FILE * Origin = fopen(FileName, "w");
@@ -121,7 +118,6 @@ int main()
 				else
 					printf("recv failed: %d\n", WSAGetLastError());
 			} while (received > 0);
-			//puts("Reply received");
 
 			//parse
 			freopen(FileName, "r", Origin);
@@ -141,7 +137,6 @@ int main()
 		SaveLastNum(offset);
 		MakeDelay();
 	}
-	//SaveLastNum(offset);
 	fclose(PGA);
 	WSACleanup();
 
@@ -268,10 +263,6 @@ void parse(FILE* origin, char* PN, long size)
 	char numbersName[40];
 	char claimsName[40];
 	char descriptionName[40];
-	/*sprintf(abstractName, "E:\\TestsNIS\\PN\\%s\\Abstract.txt", PN);
-	sprintf(numbersName, "E:\\TestsNIS\\PN\\%s\\Class number.txt", PN);
-	sprintf(claimsName, "E:\\TestsNIS\\PN\\%s\\Claims.txt", PN);
-	sprintf(descriptionName, "E:\\TestsNIS\\PN\\%s\\Description.txt", PN);*/
 
 	sprintf(abstractName, "D:\\TestsNIS\\%s\\Abstract.txt", PN);
 	sprintf(numbersName, "D:\\TestsNIS\\%s\\Class number.txt", PN);
