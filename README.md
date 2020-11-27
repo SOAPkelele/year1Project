@@ -1,7 +1,7 @@
 # year1Project
 A program that automatically downloads the necessary data about patents from www.uspto.gov/
 
-It was written as a course work a year ago during my first year at the university.  
+It was written as a course work in 2018 during my first year at the university.  
 
 
 In order to start that program you need to read the description as you may not unsedrtand what you need to download and how everything works. 
